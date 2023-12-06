@@ -15,6 +15,7 @@
 		6586736F2B207440009B2853 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6586736D2B207440009B2853 /* LaunchScreen.storyboard */; };
 		658673782B2074C1009B2853 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658673772B2074C1009B2853 /* Reminder.swift */; };
 		6586737A2B20A5D1009B2853 /* Date+Today.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658673792B20A5D1009B2853 /* Date+Today.swift */; };
+		6586737D2B20AA62009B2853 /* ReminderListViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6586737C2B20AA62009B2853 /* ReminderListViewController+DataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		658673702B207440009B2853 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		658673772B2074C1009B2853 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 		658673792B20A5D1009B2853 /* Date+Today.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Today.swift"; sourceTree = "<group>"; };
+		6586737C2B20AA62009B2853 /* ReminderListViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReminderListViewController+DataSource.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +64,7 @@
 			children = (
 				658673622B20743F009B2853 /* AppDelegate.swift */,
 				658673642B20743F009B2853 /* SceneDelegate.swift */,
-				658673662B20743F009B2853 /* ReminderListViewController.swift */,
+				6586737B2B20AA48009B2853 /* ListViewController */,
 				658673762B2074B1009B2853 /* Models */,
 				658673682B20743F009B2853 /* Main.storyboard */,
 				6586736B2B207440009B2853 /* Assets.xcassets */,
@@ -79,6 +81,15 @@
 				658673792B20A5D1009B2853 /* Date+Today.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		6586737B2B20AA48009B2853 /* ListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				658673662B20743F009B2853 /* ReminderListViewController.swift */,
+				6586737C2B20AA62009B2853 /* ReminderListViewController+DataSource.swift */,
+			);
+			path = ListViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +168,7 @@
 				658673632B20743F009B2853 /* AppDelegate.swift in Sources */,
 				658673652B20743F009B2853 /* SceneDelegate.swift in Sources */,
 				658673782B2074C1009B2853 /* Reminder.swift in Sources */,
+				6586737D2B20AA62009B2853 /* ReminderListViewController+DataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
