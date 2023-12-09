@@ -30,7 +30,9 @@ class TextViewContentView: UIView, UIContentView {
     init(_ configuration: UIContentConfiguration) {
         self.configuration = configuration
         super.init(frame: .zero)
-        addPinnedSubview(textView, insets: UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16))
+        addPinnedSubview(textView, height: 200)
+        textView.backgroundColor = nil
+        textView.font = UIFont.preferredFont(forTextStyle: .body)
     }
     
     required init?(coder: NSCoder) {
