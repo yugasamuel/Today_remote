@@ -25,6 +25,8 @@ class DatePickerContentView: UIView, UIContentView {
     init(_ configuration: UIContentConfiguration) {
         self.configuration = configuration
         super.init(frame: .zero)
+        addPinnedSubview(datePicker)
+        datePicker.preferredDatePickerStyle = .inline
     }
     
     override var intrinsicContentSize: CGSize {

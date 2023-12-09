@@ -33,6 +33,12 @@ extension ReminderViewController {
         contentConfiguration.text = title
         return contentConfiguration
     }
+    
+    func dueDateConfiguration(for cell: UICollectionViewCell, with dueDate: Date) -> DatePickerContentView.Configuration {
+        var contentConfiguration = cell.datePickerConfiguration()
+        contentConfiguration.dueDate = dueDate
+        return contentConfiguration
+    }
 
     func text(for row: Row) -> String? {
         switch row {
