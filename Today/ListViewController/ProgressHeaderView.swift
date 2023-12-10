@@ -35,6 +35,7 @@ class ProgressHeaderView: UICollectionReusableView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        heightConstraint?.constant = progress * bounds.height
         containerView.layer.masksToBounds = true
         containerView.layer.cornerRadius = 0.5 * containerView.bounds.width
     }
@@ -51,11 +52,7 @@ class ProgressHeaderView: UICollectionReusableView {
         heightAnchor.constraint(equalTo: widthAnchor, multiplier: 1).isActive = true
         containerView.heightAnchor.constraint(equalTo: containerView.widthAnchor, multiplier: 1)
             .isActive = true
-        
-        heightAnchor.constraint(equalTo: widthAnchor, multiplier: 1).isActive = true
-        containerView.heightAnchor.constraint(equalTo: containerView.widthAnchor, multiplier: 1)
-            .isActive = true
-        
+
         containerView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         containerView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         
@@ -69,6 +66,9 @@ class ProgressHeaderView: UICollectionReusableView {
         upperView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         lowerView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         lowerView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        
+        heightConstraint = lowerView.heightAnchor.constraint(equalToConstant: 0)
+        heightConstraint?.isActive = true
         
         backgroundColor = .clear
         containerView.backgroundColor = .clear
